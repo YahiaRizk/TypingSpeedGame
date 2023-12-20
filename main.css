@@ -1,0 +1,129 @@
+:root {
+  --main-color: #a1eafb;
+  --second-color: #ffcef3;
+  --third-color: #cabbe9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game {
+  background-color: #fdfdfd;
+  text-align: center;
+}
+.name {
+  background-color: var(--main-color);
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 0.2px var(--third-color);
+}
+.container {
+  width: 80%;
+  margin: 15px auto;
+}
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+.container .message {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid var(--third-color);
+}
+.container .message span {
+  color: var(--third-color);
+}
+.container .message span::before {
+  content: "[ ";
+}
+.container .message span::after {
+  content: " ]";
+}
+
+.container .start {
+  background-color: var(--second-color);
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+.container .the-word {
+  color: var(--main-color);
+  font-size: 70px;
+  font-weight: bold;
+  user-select: none;
+}
+.container .input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid var(--third-color);
+  border-radius: 6px;
+  caret-color: var(--third-color);
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.container .input:focus {
+  outline: none;
+  border: 2px solid var(--third-color);
+}
+.container .upcoming-word {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+  padding: 10px;
+  flex-wrap: wrap;
+  background-color: white;
+  border: 1px solid var(--second-color);
+}
+.container .upcoming-word div {
+  background-color: var(--main-color);
+  color: white;
+  padding: 5px;
+  margin: 3px 3px;
+  -webkit-text-stroke: 0.1px var(--third-color);
+}
+.container .control {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 15px 10px;
+  background-color: var(--third-color);
+  color: white;
+  font-size: 15px;
+}
+.container .control span {
+  color: var(--main-color);
+}
+.container .control span::before {
+  content: "[ ";
+}
+.container .control span::after {
+  content: " ]";
+}
+.container .control .score {
+  flex: 1;
+  text-align: right;
+}
+
+.finish {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 15px;
+}
+.finish.good {
+  color: var(--main-color);
+}
+.finish.bad {
+  color: red;
+}
